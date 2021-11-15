@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  padding: 20px;
+  font-size: 24px;
+  color: hsl(186, 14%, 43%);
+}
+.logo-container {
+  margin: 20px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  border: 1px red solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  float: left;
+  width: 50%;
+}
+.tip-value {
+  text-align: center;
+  font-size: 24px;
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  color: white;
+  background-color: hsl(183, 100%, 15%);
+}
+.tip-select-container input {
+  background-color: rgb(248, 248, 248);
+}
+.person-icon,
+.dolar-icon {
+  position: absolute;
+}
+.bill-price,
+.numper-of-people {
+  height: 30px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(248, 248, 248);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  color: white;
+  padding: 10px;
+  background-color: hsl(183, 100%, 15%);
+  height: 300px;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 10px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
