@@ -47,7 +47,8 @@ input::-webkit-inner-spin-button {
   float: left;
   width: 50%;
 }
-.tip-value {
+.tip-value,
+.tip-btn {
   text-align: center;
   font-size: 24px;
   width: 150px;
@@ -58,6 +59,14 @@ input::-webkit-inner-spin-button {
   font-family: "Space Mono", monospace;
   color: white;
   background-color: hsl(183, 100%, 15%);
+}
+.tip-btn.active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.tip-custom {
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
 }
 .tip-select-container button:hover {
   cursor: pointer;
@@ -95,9 +104,9 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
 }
-.tip-amount-value,
-.total-price-value {
+.value {
   font-size: 30px;
+  font-weight: 700;
   color: hsl(172, 67%, 45%);
   float: right;
 }
