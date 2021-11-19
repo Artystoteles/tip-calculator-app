@@ -3,14 +3,12 @@ const buttons = document.querySelectorAll(".tip-btn");
 const tipCustom = document.querySelector(".tip-custom");
 const people = document.querySelector(".number-of-people");
 const results = document.querySelectorAll(".value");
-console.log(results);
-console.log(results[0]);
-console.log(results[1]);
+const resetBtn = document.querySelector(".reset-btn");
 
 let billValue = 0.0;
 let tipValue = 0.0;
 let peopleValue = 1;
-
+resetBtn.addEventListener("click", reset);
 bill.addEventListener("input", setBillValue);
 tipCustom.addEventListener("input", setCustomTip);
 buttons.forEach((btn) => {
@@ -72,11 +70,16 @@ function setPeople() {
 function calculateTip() {
   if (peopleValue >= 1) {
     let tipAmount = (billValue * tipValue) / peopleValue;
-    let total = (billValue + tipAmount) / peopleValue;
-    console.log(tipAmount);
-    console.log(total);
-    results[1].innetText = "$" + total;
-    results[0].innerText = "$" + tipAmount;
+    let total = (billValue * (tipValue + 1)) / peopleValue;
+    results[0].innerHTML = "$" + tipAmount.toFixed(2);
+    results[1].innerHTML = "$" + total.toFixed(2);
   }
-  debugger;
+}
+
+function reset() {
+  bill.value = "0.0";
+  setBillValue();
+
+  people.value = "1";
+  setPeopleValue();
 }
