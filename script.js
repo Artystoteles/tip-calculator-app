@@ -11,6 +11,7 @@ let peopleValue = 1;
 resetBtn.addEventListener("click", reset);
 bill.addEventListener("input", setBillValue);
 tipCustom.addEventListener("input", setCustomTip);
+
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     buttons.forEach((btn) => {
